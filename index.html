@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLOG</title>
+    <style>
+        header {
+            background-color: rgb(211, 29, 29);
+            color: #FFFFFF;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 16px;
+            border: 5px solid rgb(211, 29, 29);
+        }
+        main {
+            background-color: #FFFFFF;
+            color: rgb(92, 24, 24);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 16px;
+        }
+        article {
+            display: flex;
+        }
+         img {
+            width: 80px;
+            height: 80px;
+        }
+
+        .artigo-autor {
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1> DNA Rubro-Negro </h1>
+        <p>Espaço onde os torcedores encontram noticias, 
+        curiosidades, opniões e tudo sobre o Mengão.
+            
+        <p>
+    </header>
+    <main>
+        <article>
+            <img src="imagem-fla.png"
+                alt="O escudo do Clube de Regatas do Flamengo é um dos maiores símbolos de identidade e paixão do futebol brasileiro. Com suas tradicionais cores vermelho e preto, apresenta listras horizontais que representam a força e a tradição do clube. No canto superior esquerdo, destaca-se o monograma branco com as letras entrelaçadas CRF, uma marca histórica do Mengão.
+
+Mais do que um símbolo, o escudo representa a história, as conquistas, a tradição e o orgulho de uma das maiores torcidas do mundo. É a identidade de milhões de apaixonados pelo Mais Querido do Brasil! ">
+            <div>
+                <h2>Meu primeiro post</h2>
+                <p class="artigo-autor">Por: Anny Vitória </p>
+                <p>Sejam todos muito bem-vindos ao DNA Rubro-Negro!
+            Preparem-se para mergulhar no universo do Mengão, acompanhar as últimas notícias,
+        reviver grandes conquistas e compartilhar a paixão que une milhões de torcedores!
+            Aqui, o Flamengo é muito mais que um time: é uma paixão que não tem fim!
+                            Uma vez Flamengo, sempre Flamengo! ❤️🖤
+                    
+                </p>
+                <button>❤️ <span>0</span></button>
+                <button>🤣 <span>0</span></button>
+            </div>
+        </article>
+
+        <article>
+            <img src="Flamengo.png"
+                alt="O símbolo representa a identidade e a tradição do Flamengo.
+                 O monograma CRF, acompanhado da estrela dourada, simboliza as conquistas, a grandeza e o orgulho de ser rubro-negro. Uma marca de paixão e história que une milhões de torcedores\! ❤️🖤 ">
+            <div>
+                <h2>Meu segundo post</h2>
+                <p class="artigo-autor">Por: Anny Vitória </p>
+                <p>Vista o Manto Sagrado e venha fazer parte dessa paixão!
+A conexão com o Mengão já começou por aqui, e você é nosso convidado especial para acompanhar as notícias, conhecer histórias, reviver grandes conquistas e vibrar com cada momento do Mais Querido!
+Prepare o coração, porque aqui a paixão pelo Flamengo nunca para!</p>
+                <button>❤️ <span>0</span></button>
+                <button>🤣 <span>0</span></button>
+            </div>
+        </article>
+    </main>
+</body>
+<script>
+    const botoes = document.querySelectorAll("button");
+
+    botoes.forEach(function (botao) {
+        let curtiu = false;
+
+        botao.addEventListener("click", botaoClicado);
+
+        function botaoClicado() {
+            console.log("fui clicado");
+            let texto = botao.querySelector("span")
+
+            if (curtiu === false) {
+                texto.textContent++;
+                curtiu = true;
+            } else {
+                texto.textContent--;
+                curtiu = false;
+            }
+        }
+})
+</script>
+
+</html>
